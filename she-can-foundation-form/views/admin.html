@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+
+    <style>
+        body{
+            font-family:Arial;
+            padding:30px;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        th,td{
+            border:1px solid #ddd;
+            padding:12px;
+        }
+
+        th{
+            background:#ff4f87;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+
+<h1>📋 Form Submissions</h1>
+
+<table>
+
+<thead>
+<tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Message</th>
+</tr>
+</thead>
+
+<tbody id="tableBody"></tbody>
+
+</table>
+
+<script>
+
+async function loadData(){
+
+    const response =
+    await fetch("/api/submissions");
+
+    const data =
+    await response.json();
+
+    let rows = "";
+
+    data.forEach(item => {
+
+        rows += `
+        <tr>
+            <td>${item.name}</td>
+            <td>${item.email}</td>
+            <td>${item.message}</td>
+        </tr>
+        `;
+    });
+
+    document
+    .getElementById("tableBody")
+    .innerHTML = rows;
+}
+
+loadData();
+
+</script>
+
+</body>
+</html>

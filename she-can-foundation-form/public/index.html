@@ -1,0 +1,97 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>She Can Foundation</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo">🌸 She Can Foundation</div>
+</nav>
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <span class="badge">Empowering Women Through Technology</span>
+
+        <h1>
+            Every Voice Matters.
+            <span>Let's Build A Better Future Together.</span>
+        </h1>
+
+        <p>
+            Share your ideas, feedback, and suggestions.
+            We believe every woman deserves opportunities,
+            support, and a platform to grow.
+        </p>
+
+    </div>
+
+    <div class="form-card">
+
+        <h2>Contact Us</h2>
+
+        <form id="contactForm">
+
+            <div class="input-group">
+                <input
+                    type="text"
+                    id="name"
+                    required
+                    placeholder=" "
+                >
+                <label>Full Name</label>
+            </div>
+
+            <div class="input-group">
+                <input
+                    type="email"
+                    id="email"
+                    required
+                    placeholder=" "
+                >
+                <label>Email Address</label>
+            </div>
+
+            <div class="input-group">
+                <textarea
+                    id="message"
+                    required
+                    maxlength="300"
+                    placeholder=" "
+                ></textarea>
+
+                <label>Your Message</label>
+
+                <span id="counter">
+                    0 / 300
+                </span>
+            </div>
+
+            <button id="submitBtn" type="submit">
+                Submit Message
+            </button>
+
+        </form>
+
+        <div id="response"></div>
+
+    </div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+```
